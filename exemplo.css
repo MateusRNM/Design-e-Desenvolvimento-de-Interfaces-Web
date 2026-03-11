@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    width: 100dvw;
+    height: 100dvh;
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+}
+
+.circle {
+    position: absolute;
+    background-color: red;
+    width: 10rem;
+    height: 10rem;
+    animation-name: ponteiro;
+    animation-timing-function: ease;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    border-radius: 80px;
+}
+
+@keyframes ponteiro {
+    0% {
+        left: 0px;
+        bottom: 0%;
+    }
+
+    50% {
+        bottom: 50%;
+    }
+
+    100% {
+        left: 90%;
+        bottom: 0%;
+    }
+}
