@@ -1,0 +1,19 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table {
+    background-color: rgba(120, 66, 230, 0.863);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 15rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 255, 0.438);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0.15rem;
+}
+
+table td:nth-child(n), table tr:nth-child(n) {
+    border: 1px solid black;
+}
