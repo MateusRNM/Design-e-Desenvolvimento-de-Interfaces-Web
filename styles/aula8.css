@@ -1,11 +1,112 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('../fonts/GoogleSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Google Sans';
+}
+
+body {
+    background-color: cornsilk;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    margin-bottom: 1rem;
+    background-color: blanchedalmond;
 }
 
 .formRow {
     display: flex;
     flex-direction: row;
-    gap: 0.3rem;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.formRow select {
+    width: 9rem;
+}
+
+.formRow input[type]:not([type="file"]), select {
+    width: 10rem;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding-left: 0.4rem;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.formRow input[type]:not([type="file"]):focus {
+    outline: 2px solid rgb(192, 243, 243);
+}
+
+#photoInput {
+    display: none;
+}
+
+#customSelector {
+    background-color: rgb(192, 243, 243);
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#customSelector:hover {
+    transform: scale(1.08);
+    background-color: rgb(170, 243, 243);
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1.5px solid black;
+}
+
+button {
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(192, 243, 243);
+    transition: all;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background-color: rgb(170, 243, 243);
 }

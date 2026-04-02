@@ -7,7 +7,7 @@
     <title>Aula 8</title>
 </head>
 <body>
-    <form action="/act" method="post">
+    <form action="/act" method="post" enctype="multipart/form-data">
         <fieldset class="container">
             <legend>Dados Pessoais</legend>
 
@@ -54,16 +54,57 @@
             </div>
 
             <div class="formRow">
-                <label for="birthday">RG:</label>
-                <input type="text"/>
+                <label for="state">Estado:</label>
+                <select name="state">
+                    <option>Acre</option>
+                </select>
             </div>
+
             <div class="formRow">
-                <label for="birthday">CPF:</label>
+                <label for="city">Cidade:</label>
+                <input type="text" name="city"/>
+            </div>
+
+            <div class="formRow">
+                <label for="cep">CEP:</label>
                 <input type="text"/>
                 <span>-</span>
                 <input type="text"/>
             </div>
         </fieldset>
+
+        <fieldset class="container">
+            <legend>Dados de login</legend>
+
+            <div class="formRow">
+                <label for="email">Email:</label>
+                <input type="email" name="email"/>
+            </div>
+
+            <div class="formRow">
+                <label for="photo">Imagem de Perfil:</label>
+                <label id="customSelector" for="photoInput">Escolher</label>
+                <input id="photoInput" type="file" name="photo" accept="image/*" />
+            </div>
+
+            <div class="formRow">
+                <label for="username">Login de Usuário:</label>
+                <input type="text" name="username" />
+            </div>
+
+            <div class="formRow">
+                <label for="password">Senha:</label>
+                <input type="password" name="password"/>
+            </div>
+
+            <div class="formRow">
+                <label for="confirmPassword">Confirme a senha:</label>
+                <input type="password" name="confirmPassword" />
+            </div>
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
     </form>
 </body>
 </html>

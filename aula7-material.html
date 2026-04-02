@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags de Formulário HTML</title>
+</head>
+<body>
+
+  <h1>Tags de Formulário em HTML</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Tag / Atributos</th>
+        <th>Descrição</th>
+        <th>Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- FORM -->
+      <tr>
+        <td>
+          <code>&lt;form&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>action</code> — URL de destino dos dados<br>
+          <code>method</code> — GET | POST<br>
+          <code>enctype</code> — codificação (ex: multipart/form-data para arquivos)<br>
+          <code>target</code> — _self | _blank | _parent | _top<br>
+          <code>novalidate</code> — desativa validação nativa<br>
+          <code>autocomplete</code> — on | off
+        </td>
+        <td>Contêiner principal que agrupa os campos de um formulário.</td>
+        <td>
+          <code>&lt;form action="/enviar" method="post"&gt; ... &lt;/form&gt;</code>
+        </td>
+      </tr>
+
+      <!-- INPUT - text -->
+      <tr>
+        <td>
+          <code>&lt;input type="text"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>name</code> — chave enviada ao servidor<br>
+          <code>value</code> — valor inicial<br>
+          <code>placeholder</code> — texto de dica<br>
+          <code>maxlength</code> / <code>minlength</code><br>
+          <code>required</code> — campo obrigatório<br>
+          <code>readonly</code> — somente leitura<br>
+          <code>disabled</code> — desativado<br>
+          <code>autofocus</code> — foco automático<br>
+          <code>autocomplete</code> — on | off<br>
+          <code>pattern</code> — regex de validação<br>
+          <code>size</code> — largura visual em caracteres
+        </td>
+        <td>Campo de texto de linha única.</td>
+        <td>
+          <label>Nome: <input type="text" name="nome" placeholder="Digite seu nome" maxlength="50"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - password -->
+      <tr>
+        <td>
+          <code>&lt;input type="password"&gt;</code><br><br>
+          <b>Atributos:</b> mesmos do type="text"
+        </td>
+        <td>Campo de senha — caracteres são ocultados.</td>
+        <td>
+          <label>Senha: <input type="password" name="senha" placeholder="••••••"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - email -->
+      <tr>
+        <td>
+          <code>&lt;input type="email"&gt;</code><br><br>
+          <b>Atributos:</b> mesmos do type="text" +<br>
+          <code>multiple</code> — aceita vários e-mails separados por vírgula
+        </td>
+        <td>Campo de e-mail com validação nativa de formato.</td>
+        <td>
+          <label>E-mail: <input type="email" name="email" placeholder="exemplo@email.com"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - number -->
+      <tr>
+        <td>
+          <code>&lt;input type="number"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>min</code> — valor mínimo<br>
+          <code>max</code> — valor máximo<br>
+          <code>step</code> — incremento (ex: 0.5)
+        </td>
+        <td>Campo numérico com controles de incremento/decremento.</td>
+        <td>
+          <label>Quantidade: <input type="number" name="qtd" min="1" max="100" step="1" value="1"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - range -->
+      <tr>
+        <td>
+          <code>&lt;input type="range"&gt;</code><br><br>
+          <b>Atributos:</b> <code>min</code>, <code>max</code>, <code>step</code>, <code>value</code>
+        </td>
+        <td>Controle deslizante (slider) para valores numéricos.</td>
+        <td>
+          <label>Volume: <input type="range" name="volume" min="0" max="100" value="50"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - date -->
+      <tr>
+        <td>
+          <code>&lt;input type="date"&gt;</code><br><br>
+          <b>Atributos:</b> <code>min</code>, <code>max</code>, <code>value</code>
+        </td>
+        <td>Seletor de data (ano-mês-dia).</td>
+        <td>
+          <label>Data: <input type="date" name="data" min="2000-01-01" max="2099-12-31"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - time -->
+      <tr>
+        <td>
+          <code>&lt;input type="time"&gt;</code><br><br>
+          <b>Atributos:</b> <code>min</code>, <code>max</code>, <code>step</code>
+        </td>
+        <td>Seletor de horário (horas e minutos).</td>
+        <td>
+          <label>Horário: <input type="time" name="hora"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - datetime-local -->
+      <tr>
+        <td>
+          <code>&lt;input type="datetime-local"&gt;</code><br><br>
+          <b>Atributos:</b> <code>min</code>, <code>max</code>
+        </td>
+        <td>Seletor de data e hora combinados (sem fuso horário).</td>
+        <td>
+          <label>Data e hora: <input type="datetime-local" name="datetime"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - checkbox -->
+      <tr>
+        <td>
+          <code>&lt;input type="checkbox"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>name</code> — checkboxes com mesmo name formam um grupo<br>
+          <code>value</code> — valor enviado quando marcado<br>
+          <code>checked</code> — marcado por padrão<br>
+          <code>required</code>
+        </td>
+        <td>
+          Caixa de seleção. Múltiplas podem ser marcadas ao mesmo tempo.<br>
+          <b>Particularidade:</b> se não marcado, o campo não é enviado ao servidor.
+        </td>
+        <td>
+          <label><input type="checkbox" name="aceito" value="sim" checked> Aceito os termos</label><br>
+          <label><input type="checkbox" name="newsletter" value="sim"> Receber newsletter</label>
+        </td>
+      </tr>
+
+      <!-- INPUT - radio -->
+      <tr>
+        <td>
+          <code>&lt;input type="radio"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>name</code> — agrupa botões (mesmo name = mesmo grupo)<br>
+          <code>value</code> — valor enviado quando selecionado<br>
+          <code>checked</code> — selecionado por padrão
+        </td>
+        <td>
+          Seleção exclusiva dentro de um grupo.<br>
+          <b>Particularidade:</b> todos com o mesmo <code>name</code> são mutuamente exclusivos.
+        </td>
+        <td>
+          <label><input type="radio" name="sexo" value="m"> Masculino</label>
+          <label><input type="radio" name="sexo" value="f"> Feminino</label>
+          <label><input type="radio" name="sexo" value="outro"> Outro</label>
+        </td>
+      </tr>
+
+      <!-- INPUT - file -->
+      <tr>
+        <td>
+          <code>&lt;input type="file"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>accept</code> — tipos aceitos (ex: .pdf, image/*, .jpg,.png)<br>
+          <code>multiple</code> — permite selecionar vários arquivos
+        </td>
+        <td>
+          Seletor de arquivo.<br>
+          <b>Particularidade:</b> o formulário deve ter <code>enctype="multipart/form-data"</code>.
+        </td>
+        <td>
+          <label>Arquivo: <input type="file" name="documento" accept=".pdf,.docx" multiple></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - color -->
+      <tr>
+        <td>
+          <code>&lt;input type="color"&gt;</code><br><br>
+          <b>Atributos:</b> <code>value</code> — cor padrão em hexadecimal
+        </td>
+        <td>Seletor de cor.</td>
+        <td>
+          <label>Cor favorita: <input type="color" name="cor" value="#ff0000"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - hidden -->
+      <tr>
+        <td>
+          <code>&lt;input type="hidden"&gt;</code><br><br>
+          <b>Atributos:</b> <code>name</code>, <code>value</code>
+        </td>
+        <td>Campo invisível. Envia dados sem exibir ao usuário (ex: token CSRF, ID de sessão).</td>
+        <td>
+          <input type="hidden" name="token" value="abc123">
+          <code>&lt;input type="hidden" name="token" value="abc123"&gt;</code>
+        </td>
+      </tr>
+
+      <!-- INPUT - search -->
+      <tr>
+        <td>
+          <code>&lt;input type="search"&gt;</code><br><br>
+          <b>Atributos:</b> mesmos do type="text"
+        </td>
+        <td>Campo de busca. Pode exibir botão de limpar (×) dependendo do navegador.</td>
+        <td>
+          <label>Buscar: <input type="search" name="q" placeholder="Pesquisar..."></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - tel -->
+      <tr>
+        <td>
+          <code>&lt;input type="tel"&gt;</code><br><br>
+          <b>Atributos:</b> <code>pattern</code>, <code>placeholder</code>, mesmos do type="text"
+        </td>
+        <td>Campo de telefone. Em dispositivos móveis abre teclado numérico.</td>
+        <td>
+          <label>Telefone: <input type="tel" name="tel" placeholder="(67) 99999-9999" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - url -->
+      <tr>
+        <td>
+          <code>&lt;input type="url"&gt;</code><br><br>
+          <b>Atributos:</b> mesmos do type="text"
+        </td>
+        <td>Campo de URL com validação nativa de formato.</td>
+        <td>
+          <label>Site: <input type="url" name="site" placeholder="https://exemplo.com"></label>
+        </td>
+      </tr>
+
+      <!-- INPUT - submit -->
+      <tr>
+        <td>
+          <code>&lt;input type="submit"&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>value</code> — texto do botão<br>
+          <code>formaction</code> — sobrescreve action do form<br>
+          <code>formmethod</code> — sobrescreve method do form<br>
+          <code>formnovalidate</code> — ignora validação
+        </td>
+        <td>Botão que envia o formulário.</td>
+        <td>
+          <input type="submit" value="Enviar">
+        </td>
+      </tr>
+
+      <!-- INPUT - reset -->
+      <tr>
+        <td>
+          <code>&lt;input type="reset"&gt;</code><br><br>
+          <b>Atributos:</b> <code>value</code> — texto do botão
+        </td>
+        <td>Botão que restaura todos os campos ao valor inicial.</td>
+        <td>
+          <input type="reset" value="Limpar">
+        </td>
+      </tr>
+
+      <!-- INPUT - button -->
+      <tr>
+        <td>
+          <code>&lt;input type="button"&gt;</code><br><br>
+          <b>Atributos:</b> <code>value</code> — texto do botão
+        </td>
+        <td>Botão sem comportamento padrão. Ação definida via JavaScript.</td>
+        <td>
+          <input type="button" value="Clique aqui" onclick="alert('Ola!')">
+        </td>
+      </tr>
+
+      <!-- BUTTON -->
+      <tr>
+        <td>
+          <code>&lt;button&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>type</code> — submit (padrão) | reset | button<br>
+          <code>name</code>, <code>value</code><br>
+          <code>disabled</code><br>
+          <code>formaction</code>, <code>formmethod</code>, <code>formnovalidate</code>
+        </td>
+        <td>
+          Botão mais flexível que <code>&lt;input type="button"&gt;</code>.<br>
+          <b>Particularidade:</b> pode conter HTML interno (ícones, imagens, texto formatado).
+        </td>
+        <td>
+          <button type="submit">Enviar formulário</button>
+          <button type="button" onclick="alert('Acao!')">Ação</button>
+        </td>
+      </tr>
+
+      <!-- TEXTAREA -->
+      <tr>
+        <td>
+          <code>&lt;textarea&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>rows</code> — número de linhas visíveis<br>
+          <code>cols</code> — número de colunas visíveis<br>
+          <code>maxlength</code> / <code>minlength</code><br>
+          <code>placeholder</code><br>
+          <code>readonly</code>, <code>disabled</code>, <code>required</code><br>
+          <code>wrap</code> — soft | hard
+        </td>
+        <td>
+          Área de texto multilinha.<br>
+          <b>Particularidade:</b> o valor padrão fica entre as tags, não no atributo <code>value</code>.
+        </td>
+        <td>
+          <textarea name="mensagem" rows="4" cols="40" placeholder="Escreva sua mensagem..."></textarea>
+        </td>
+      </tr>
+
+      <!-- SELECT + OPTION + OPTGROUP -->
+      <tr>
+        <td>
+          <code>&lt;select&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>name</code><br>
+          <code>multiple</code> — permite selecionar várias opções<br>
+          <code>size</code> — nº de opções visíveis simultaneamente<br>
+          <code>required</code>, <code>disabled</code><br><br>
+
+          <code>&lt;option&gt;</code><br>
+          <b>Atributos:</b><br>
+          <code>value</code> — valor enviado ao servidor<br>
+          <code>selected</code> — selecionado por padrão<br>
+          <code>disabled</code> — opção desativada<br>
+          <code>label</code> — rótulo alternativo<br><br>
+
+          <code>&lt;optgroup&gt;</code><br>
+          <b>Atributos:</b><br>
+          <code>label</code> — título do grupo (obrigatório)<br>
+          <code>disabled</code> — desativa o grupo inteiro
+        </td>
+        <td>
+          Lista de seleção.<br>
+          <b>Particularidades:</b><br>
+          — O texto entre <code>&lt;option&gt;</code> é o que o usuário vê; <code>value</code> é o que é enviado.<br>
+          — Se <code>value</code> for omitido, o texto visível é enviado.<br>
+          — <code>&lt;optgroup&gt;</code> agrupa opções com um rótulo visual (não é selecionável).<br>
+          — Com <code>multiple</code>, use Ctrl/Cmd + clique para selecionar várias.
+        </td>
+        <td>
+          <select name="cidade">
+            <option value="" disabled selected>Selecione uma cidade</option>
+            <optgroup label="Mato Grosso do Sul">
+              <option value="cg">Campo Grande</option>
+              <option value="dou">Dourados</option>
+            </optgroup>
+            <optgroup label="São Paulo">
+              <option value="sp">São Paulo</option>
+              <option value="camp">Campinas</option>
+            </optgroup>
+          </select>
+        </td>
+      </tr>
+
+      <!-- DATALIST -->
+      <tr>
+        <td>
+          <code>&lt;datalist&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>id</code> — deve corresponder ao <code>list</code> do input<br><br>
+          Contém <code>&lt;option&gt;</code> com <code>value</code>
+        </td>
+        <td>
+          Fornece sugestões (autocomplete) para um <code>&lt;input&gt;</code>.<br>
+          <b>Particularidade:</b> o usuário ainda pode digitar um valor fora da lista (diferente de select).
+        </td>
+        <td>
+          <label>Linguagem:
+            <input type="text" name="linguagem" list="linguagens" placeholder="Ex: Python">
+          </label>
+          <datalist id="linguagens">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+          </datalist>
+        </td>
+      </tr>
+
+      <!-- LABEL -->
+      <tr>
+        <td>
+          <code>&lt;label&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>for</code> — deve corresponder ao <code>id</code> do campo associado<br>
+          (ou envolver o campo diretamente, sem <code>for</code>)
+        </td>
+        <td>
+          Rótulo associado a um campo.<br>
+          <b>Particularidade:</b> clicar no label foca/ativa o campo correspondente — importante para acessibilidade.
+        </td>
+        <td>
+          <label for="usuario">Usuário:</label>
+          <input type="text" id="usuario" name="usuario"><br><br>
+          <label>Senha: <input type="password" name="senha2"></label>
+        </td>
+      </tr>
+
+      <!-- FIELDSET + LEGEND -->
+      <tr>
+        <td>
+          <code>&lt;fieldset&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>disabled</code> — desativa todos os campos internos<br>
+          <code>name</code>, <code>form</code><br><br>
+
+          <code>&lt;legend&gt;</code><br>
+          Sem atributos específicos. Texto descritivo do grupo.
+        </td>
+        <td>
+          Agrupa campos relacionados visualmente com uma borda.<br>
+          <b>Particularidade:</b> <code>disabled</code> no fieldset desativa todos os campos filhos de uma só vez.
+        </td>
+        <td>
+          <fieldset>
+            <legend>Dados pessoais</legend>
+            <label>Nome: <input type="text" name="nome2"></label><br>
+            <label>Idade: <input type="number" name="idade" min="0"></label>
+          </fieldset>
+        </td>
+      </tr>
+
+      <!-- OUTPUT -->
+      <tr>
+        <td>
+          <code>&lt;output&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>for</code> — IDs dos inputs que originam o valor<br>
+          <code>name</code>, <code>form</code>
+        </td>
+        <td>Exibe o resultado de um cálculo ou ação (geralmente atualizado via JavaScript).</td>
+        <td>
+          <form oninput="resultado.value = Number(a.value) + Number(b.value)">
+            <input type="number" id="a" name="a" value="0"> +
+            <input type="number" id="b" name="b" value="0"> =
+            <output name="resultado" for="a b">0</output>
+          </form>
+        </td>
+      </tr>
+
+      <!-- PROGRESS -->
+      <tr>
+        <td>
+          <code>&lt;progress&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>value</code> — valor atual<br>
+          <code>max</code> — valor máximo (padrão: 1)
+        </td>
+        <td>
+          Barra de progresso.<br>
+          <b>Particularidade:</b> sem <code>value</code> exibe animação de progresso indeterminado.
+        </td>
+        <td>
+          Determinado: <progress value="70" max="100"></progress> 70%<br>
+          Indeterminado: <progress></progress>
+        </td>
+      </tr>
+
+      <!-- METER -->
+      <tr>
+        <td>
+          <code>&lt;meter&gt;</code><br><br>
+          <b>Atributos:</b><br>
+          <code>value</code> — valor atual (obrigatório)<br>
+          <code>min</code> / <code>max</code> — intervalo<br>
+          <code>low</code> — limite inferior do "bom"<br>
+          <code>high</code> — limite superior do "bom"<br>
+          <code>optimum</code> — valor ideal
+        </td>
+        <td>
+          Medidor escalar dentro de um intervalo conhecido.<br>
+          <b>Particularidade:</b> diferente de <code>&lt;progress&gt;</code>, representa uma medida, não um progresso. Muda de cor conforme <code>low</code>, <code>high</code> e <code>optimum</code>.
+        </td>
+        <td>
+          Bateria: <meter value="0.7" min="0" max="1" low="0.2" high="0.8" optimum="1">70%</meter><br>
+          Crítico: <meter value="0.1" min="0" max="1" low="0.2" high="0.8" optimum="1">10%</meter>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
