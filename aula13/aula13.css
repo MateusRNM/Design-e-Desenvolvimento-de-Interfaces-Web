@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+#container {
+    border: 3px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background: linear-gradient(rgb(0, 0, 73), rgb(62, 2, 172));
+    width: 20rem;
+}
+
+.tabela {
+    width: 20rem;
+    height: 30rem;
+    background: linear-gradient(rgb(0, 0, 73), rgb(62, 2, 172));
+    color: rgb(174, 243, 109);
+    border-radius: 0.3rem;
+    text-align: center;
+    margin-left: 1rem;
+    border-collapse: collapse;
+}
+
+.tabela td, .tabela th {
+    border: 1px solid blue;
+    width: 4rem;
+    height: 4rem;
+}
+
+.tabela tr:hover {
+    background-color: blue;
+    color: brown;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tabela tfoot {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tabela caption {
+    font-size: 1.3rem;
+}
+
+h1, h3 {
+    color: cadetblue;
+    text-align: center;
+}
