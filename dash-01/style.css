@@ -73,10 +73,19 @@ header {
     margin-left: 1rem;
 }
 
-.avatar {
+.profileImage {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
+    background-color: var(--icon-color-search);
+    margin-left: 2.5rem;
+}
+
+.avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
     background-color: var(--icon-color-search);
 }
 
@@ -88,13 +97,10 @@ header {
 
 .images {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-.headerBox .avatar {
-    margin-left: 2.5rem;
-}
 
 .subheader {
     display: flex;
@@ -103,12 +109,62 @@ header {
     width: 100%;
 }
 
+.subheader span, .subheader h3 {
+    color: #fff;
+}
+
+.subheader .box1 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
 .subheader .box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 16%;
+    background-color: var(--bg-perfil);
 }
 
 .subheader .box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 84%;
+    background-color: var(--bg-perfil);
+}
+
+.subheader .box2 .textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.5rem;
+    height: 100%;
+    gap: 0.8rem;
+}
+
+.subheader .box2 .controlBox {
+    display: flex;
+    align-items: center;
+    margin-right: 2.5rem;
+    gap: 0.2rem;
+}
+
+.subheader .box2 .controlBox span {
+    font-size: 0.95rem;
+}
+
+.subheader .box2 .textBox h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.subheader .box2 .textBox span {
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 aside {
