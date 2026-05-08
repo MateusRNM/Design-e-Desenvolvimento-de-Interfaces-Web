@@ -4,6 +4,10 @@
   /* Icons */
   --icon-color-default: #777;
   --icon-color-search: #626a6e;
+  --icon-color-indigo: #8088e8;
+  --icon-color-red: #eb5c65;
+  --icon-color-green: #1db26d;
+  --icon-color-blue: #4e83d0;
   /* Header */
   --bg-header: #438afc;
 
@@ -30,6 +34,35 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+h5 {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.icon-indigo {
+    color: var(--icon-color-indigo);
+}
+
+.icon-red {
+    color: var(--icon-color-red);
+}
+
+.icon-green {
+    color: var(--icon-color-green);
+}
+
+
+.icon-blue {
+    color: var(--icon-color-blue);
 }
 
 body {
@@ -61,6 +94,15 @@ header {
     align-items: center;
 }
 
+.userSelect {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 .headerBox span {
     color: #fff;
 }
@@ -69,16 +111,13 @@ header {
     margin-left: 1.5rem;
 }
 
-.headerBox .name {
-    margin-left: 1rem;
-}
-
 .profileImage {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     background-color: var(--icon-color-search);
-    margin-left: 2.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
 
 .avatar {
@@ -111,13 +150,6 @@ header {
 
 .subheader span, .subheader h3 {
     color: #fff;
-}
-
-.subheader .box1 span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
 }
 
 .subheader .box1 {
@@ -233,4 +265,40 @@ main {
     background-color: var(--primary-color);
     box-shadow: var(--active-shadow);
     color: #fff;
+}
+
+.content {
+    width: 100%;
+    padding: 2rem;
+}
+
+.content .card1 {
+    width: 100%;
+}
+
+.content .card1 .statistics {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-sidebar);
+    width: 24rem;
+}
+
+.content .card1 .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 12rem;
+    height: 5rem;
+}
+
+.content .card1 .info .icon {
+    font-size: 2rem;
+}
+
+.content .card1 .info .box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
 }
