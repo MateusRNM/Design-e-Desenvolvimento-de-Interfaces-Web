@@ -7,9 +7,9 @@
   --icon-color-indigo: #8088e8;
   --icon-color-red: #eb5c65;
   --icon-color-green: #1db26d;
-  --icon-color-green-transparent: rgb(0, 235, 98);
+  --icon-color-green-transparent: #32ee80;
   --icon-color-blue: #4e83d0;
-  --icon-color-blue-transparent: rgba(78, 131, 208, 0.5);
+  --icon-color-blue-transparent: #92bbfd;
   /* Header */
   --bg-header: #438afc;
 
@@ -29,6 +29,7 @@
 
   /* Content */
   --bg-content: #ffb2b2;
+  --text-light: #fff;
 }
 
 * {
@@ -116,14 +117,14 @@ header {
     border: none;
     background-color: transparent;
     outline: none;
-    color: #fff;
+    color: var(--text-light);
     font-size: 1rem;
     font-weight: 300;
     width: auto;
 }
 
 .headerBox span {
-    color: #fff;
+    color: var(--text-light);
 }
 
 .headerBox span.material-icons {
@@ -161,14 +162,14 @@ header {
 
 .subheader {
     display: flex;
-    background-color: #fff;
+    background-color: var(--bg-sidebar);
     height: 15%;
     width: 100%;
     box-shadow: 0 0 4px 0 var(--text-muted);
 }
 
 .subheader span, .subheader h3 {
-    color: #fff;
+    color: var(--text-light);
 }
 
 .subheader .box1 {
@@ -219,7 +220,7 @@ header {
 }
 
 aside {
-    background-color: #fff;
+    background-color: var(--bg-sidebar);
     width: 16%;
     height: 85%;
     padding: 1rem;
@@ -284,10 +285,13 @@ main {
 .active {
     background-color: var(--primary-color);
     box-shadow: var(--active-shadow);
-    color: #fff;
+    color: var(--text-light);
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     width: 100%;
     padding: 2rem;
 }
@@ -348,7 +352,7 @@ main {
 
 .content .card1 .statistics2 .info {
     display: flex;
-    color: white;
+    color: var(--text-light);
     min-width: 100%;
     height: 5rem;
 }
@@ -374,5 +378,44 @@ main {
 }
 
 .content .card1 .statistics2 .info .box2 h5, .content .card1 .statistics2 .info .box2 h4 {
-    color: white;
+    color: var(--text-light);
+}
+
+.content .card2 {
+    background-color: var(--bg-sidebar);
+    width: 45rem;
+    border-radius: 8px;
+}
+
+.content .card2 .table-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1.2rem;
+}
+
+.content .card2 .table-item {
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+.content .card2 .table-item > div {
+    display: flex;
+}
+
+.content .card2 .table-item .t-avatar {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .card2 .table-item .t-gain {
+    display: flex;
+    gap: 0.6rem;
+    margin-right: 0.8rem;
 }
