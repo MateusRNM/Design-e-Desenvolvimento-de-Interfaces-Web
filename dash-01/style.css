@@ -10,11 +10,9 @@
   --icon-color-green-transparent: #32ee80;
   --icon-color-blue: #4e83d0;
   --icon-color-blue-transparent: #92bbfd;
-  /* Header */
-  --bg-header: #438afc;
 
-  /* perfil */
-  --bg-perfil: #3761b7;
+  /* Header */
+  --bg-header: #448aff;
 
   /* Sidebar */
   --primary-color: #448aff;
@@ -30,6 +28,8 @@
   /* Content */
   --bg-content: #ffb2b2;
   --text-light: #fff;
+
+  --icon-light-gray: #8c8c8c;
 }
 
 * {
@@ -149,8 +149,7 @@ header {
 }
 
 .icon {
-    width: 3rem;
-    border-radius: 50%;
+    width: auto;
 }
 
 .images {
@@ -178,7 +177,9 @@ header {
     justify-content: center;
     align-items: center;
     width: 16%;
-    background-color: var(--bg-perfil);
+    max-width: 16%;
+    background: linear-gradient(rgba(68, 138, 255, 0.5), rgba(68, 138, 255, 0.5)), url('/dash-01/images/user-bg.jpg');
+    background-size: cover;
 }
 
 .subheader .box2 {
@@ -186,7 +187,8 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 84%;
-    background-color: var(--bg-perfil);
+    background: linear-gradient(rgba(68, 138, 255, 0.5), rgba(68, 138, 255, 0.5)), url('/dash-01/images/breadcrumb-bg.jpg');
+    background-size: cover;
 }
 
 .subheader .box2 .textBox {
@@ -292,7 +294,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    width: 100%;
+    width: 84%;
     padding: 2rem;
 }
 
@@ -418,4 +420,9 @@ main {
     display: flex;
     gap: 0.6rem;
     margin-right: 0.8rem;
+}
+
+.content .card2 .table-caption .material-icons {
+    font-size: 12px;
+    color: var(--icon-light-gray);
 }
