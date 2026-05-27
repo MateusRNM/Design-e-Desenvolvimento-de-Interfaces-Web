@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(48, 46, 46);
+    color: white;
+}
+
+.container {
+    width: 1000px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    height: 800px;
+    grid-template-columns: 300px auto 300px;
+    justify-items: center;
+    gap: 10px;
+}
+
+.grid-item {
+    border: 1px solid blue;
+    background-color: rgb(12, 98, 148);
+}

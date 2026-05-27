@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(48, 46, 46);
+    color: white;
+}
+
+.container {
+    width: 1000px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+.grid-container {
+    height: 900px;
+    display: grid;
+    grid-template: "logo header header" 100px
+                    "sidebar content content" 300px
+                    "footer footer footer" 150px;
+}
+
+.grid-item {
+    border: 1px solid blue;
+    background-color: rgb(12, 98, 148);
+}
+
+.header {
+    grid-area: header;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
