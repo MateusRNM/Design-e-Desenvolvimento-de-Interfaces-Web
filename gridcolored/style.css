@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    width: 573px;
+    height: 685px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "pink pink blue blue"
+        "purple purple blue blue"
+        "red red red red"
+        "green yellow orange orange"
+        "green yellow pink2 beige";
+}
+
+.pink {
+    background-color: #ff00ff;
+    grid-area: pink;
+}
+
+.blue {
+    background-color: #0000ff;
+    grid-area: blue;
+}
+
+.purple {
+    background-color: #800080;
+    grid-area: purple;
+}
+
+.red {
+    background-color: #ff0000;
+    grid-area: red;
+}
+
+.green {
+    background-color: #66ff00;
+    grid-area: green;
+}
+
+.yellow {
+    background-color: #ffd42a;
+    grid-area: yellow;
+}
+
+.orange {
+    background-color: #ff7f2a;
+    grid-area: orange;
+}
+
+.pink2 {
+    background-color: #cc00ff;
+    grid-area: pink2;
+}
+
+.beige {
+    background-color: #ac9393;
+    grid-area: beige;
+}
